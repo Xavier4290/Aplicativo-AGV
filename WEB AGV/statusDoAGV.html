@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bateria.css">
+    <link rel="stylesheet" href="js/contador.js">
+    <link rel="stylesheet" href="js/bateriaOficial.js">
+    <title>Status</title>
+</head>
+
+<script>
+    function showModal(){
+        var element = document.getElementById("modal");
+        element.classList.add("show-modal");
+    }
+
+    function hidenModal(){
+        var element = document.getElementById("modal");
+        element.classList.remove("show-modal");
+    }
+    /*Função para vizualizar se o carrinho parou*/
+    function showModalStop(){
+        var element = document.getElementById("modalStop");
+        element.classList.add("show-modalStop");
+    }
+
+    function hidenModalStop(){
+        var element = document.getElementById("modalStop");
+        element.classList.remove("show-modalStop");
+    }
+
+    function showModalPeca(){
+        var element = document.getElementById("modalPeca");
+        element.classList.add("show-modalPeca");
+    }
+
+    function hidenModalPeca(){
+        var element = document.getElementById("modaPeca");
+        element.classList.remove("show-modalPeca");
+
+    }
+</script>
+
+<script src="js/bateriaOficial.js"></script>
+<body background="img/fundo-de-tecnologia-abstrato-gradiente-azul_23-2149213765.webp">
+             <!--Bateria-->
+    <div class="battery">
+        <div class="level charging">
+            <div class="text">00</div>
+        </div>
+    </div>
+  
+   
+        <!--Alerta que o carrinho precisa de manutenção-->
+<div class="container">
+        <button type="button" onclick="showModal()" class="flash bnt" style="margin-top:112%; position:absolute; color: black; margin-left: 105.6%;">Alerta</button>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span onclick="hidenModal()" class="spanAlerta">&times;</span>
+                 <h1>O carrinho precisa de manutenção</h1>      
+         </div>
+</div>
+                     <!--Alerta que o carrinho Parou-->
+    <button onclick="showModalStop()" class="flashStop bntStop" style="color:black; margin-top: 100%; margin-left: 120%;">Parou</button>
+        <div class="modalStop" id="modalStop">
+            <div class="modal-contentStop">
+                <span onclick="hidenModalStop()" class="spanStop">&times;</span>
+                <h1>O carrinho parou de funcionar</h1>
+            </div>
+        </div>
+    </div>
+
+    <div style="display:flex; margin-top: 60.5%; margin-left: 25.5%; color: #fff; width: 175px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="175" height="175" fill="currentColor" class="bi bi-minecart" viewBox="0 0 16 16">
+            <path d="M4 15a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm0 1a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8-1a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm0 1a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM.115 3.18A.5.5 0 0 1 .5 3h15a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 14 12H2a.5.5 0 0 1-.491-.408l-1.5-8a.5.5 0 0 1 .106-.411zm.987.82 1.313 7h11.17l1.313-7H1.102z"/>
+          </svg>
+       <i class="bi bi-minecart-loaded"></i> 
+    </div>
+
+    
+             
+                                        <!--Botão Peça-->
+    <script src="js/contador.js"></script>
+        <div style="margin-left: 45%;">
+            <h1 id="watch" style="color:#fff;">0</h1>
+                <button class="start-btn" onclick="start()">Iniciar</button>
+        </div>
+                                        
+</body>
+</html>

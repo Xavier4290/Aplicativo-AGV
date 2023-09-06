@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/popup.css" >
+    <script src="js/chat.js"></script>
+ 
+</head>
+
+<body background="img/fundo-de-tecnologia-abstrato-gradiente-azul_23-2149213765.webp">
+    <div class="container">
+
+        <button class="popup-button" type="submit" onclick="handlePopup(true)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="currentColor" class="bi bi-chat-square-text-fill" viewBox="0 0 16 16" style="margin-top:5px ;">
+                <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.5a1 1 0 0 0-.8.4l-1.9 2.533a1 1 0 0 1-1.6 0L5.3 12.4a1 1 0 0 0-.8-.4H2a2 2 0 0 1-2-2V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
+              </svg>
+        </button>
+
+        <div class="popup" id="popup">
+        
+            <h2 class="title"> CHAT SCANIA !</h2>
+
+            <div class="chat-bar-collapsible">
+                
+             
+                    <div class="full-chat-block">
+                        <!-- Message Container -->
+                        <div class="outer-container">
+                            <div class="chat-container">
+                                <!-- Messages -->
+                                <div id="chatbox">
+                                    <h5 id="chat-timestamp"></h5>
+                                    <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                                </div>
+        
+                                <!-- User input box -->
+                                <div class="chat-bar-input-block">
+                                    <div id="userInput">
+                                        <input id="textInput" class="input-box" type="text" name="msg"
+                                            placeholder="Envie sua mensagem">
+                                        <p></p>
+                                    </div>
+        
+                                    <div class="chat-bar-icons">
+                                        <i id="chat-icon" style="color: #D6001C;" class="fa fa-fw fa-heart"
+                                            onclick="heartButton()"></i>
+                                          
+                                        <i id="chat-icon" style="color: #110b42;" class="fa fa-fw fa-send"
+                                            onclick="sendButton()"></i>
+                                    </div>
+                                </div>
+        
+                                <div id="chat-bar-bottom">
+                                    <p></p>
+                                </div>
+        
+                            </div>
+                        </div>
+        
+                    </div>
+               
+        
+            </div>
+
+            <p class="desc">Ocorreu um erro na execução do processo.</p>
+
+            <button class="close-popup-button" type="submit" onclick="handlePopup(false)">
+                Fechar
+            </button>
+        </div>
+
+    </div>
+
+    <script> 
+        const popup = document.getElementById('popup');
+
+        function handlePopup(open) {
+            popup.classList[open ? 'add' : 'remove']('opened');
+        }
+    </script>
+
+</body>
+
+</html>

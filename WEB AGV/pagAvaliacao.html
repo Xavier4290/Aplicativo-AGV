@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/paginaAvaliacao.css" rel="stylesheet">
+    <link href="css/testemenu.css" rel="stylesheet">
+    <script src="js/pagAvaliacao.js"></script>
+    <title> Avaliação</title>
+</head>
+<body background="img/fundo-de-tecnologia-abstrato-gradiente-azul_23-2149213765.webp">
+
+
+  <img src="img/logo pequeno da Scania.webp" style="height: 100px; margin-top: 5%; margin-left: 22%;">
+  
+
+
+  <div class="avaliacao">
+    <h1>DEIXE SUA AVALIAÇÃO AQUI:</h1>
+  </div>
+    
+
+
+     <input type="radio" name="estrela" id="estrela-1" class=" inp-none input-estrela">
+     <input type="radio" name="estrela" id="estrela-2" class="inp-none input-estrela">
+     <input type="radio" name="estrela" id="estrela-3" class="inp-none input-estrela" checked>
+     <input type="radio" name="estrela" id="estrela-4" class="inp-none input-estrela">
+     <input type="radio" name="estrela" id="estrela-5" class="inp-none input-estrela">
+         <label for="estrela-1" class="box-estrela">
+             <div class="estrela-diagrama"></div>
+         </label>
+         <label for="estrela-2" class="box-estrela">
+             <div class="estrela-diagrama"></div>
+         </label>
+         <label for="estrela-3" class="box-estrela">
+             <div class="estrela-diagrama"></div>
+         </label>
+         <label for="estrela-4" class="box-estrela">
+             <div class="estrela-diagrama"></div>
+         </label>
+         <label for="estrela-5" class="box-estrela">
+             <div class="estrela-diagrama"></div>
+      </div>
+        
+    <!--TERMINA SEU CONTEÚDO AQUI-->
+
+
+
+
+  <!--INÍCIO DA PARTE DO FEEDBACK-->
+
+  <div class="login-box">
+    <h2>DEIXE SEU FEEDBACK :</h2>
+    <form>
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label>Seu Feedback</label>
+      </div>
+    
+    
+       
+       <button onclick="funcao1()" style="background-color:rgba(0,0,0,.5); border-color:rgb(255, 255, 255);width:50%;margin-left:-2%; margin-top:20%;"><p>ENVIAR FEEDBACK</p></button>
+       <button class="botao" style="background-color:rgba(0,0,0,.5); border-color:rgb(255, 253, 253);width:50%;margin-left:50%; margin-block-end: 30;"><p>LEMBRAR-ME DEPOIS</p></button>
+    
+       <script>
+        function funcao1()
+        {
+        var x;
+        var r=confirm("SEU FEEDBACK FOI ENVIADO COM SUCESSO!");
+        if (r==true)
+          {
+          x="você pressionou OK!";
+          }
+        else
+          {
+          x="Você pressionou Cancelar!";
+          }
+        document.getElementById("demo").innerHTML=x;
+        }
+        </script>
+
+    </form>
+  </div>
+
+
+
+
+
+
+
+
+  <!--FIM DA PARTE DO FEEDBACK-->
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/testemenu.css" rel="stylesheet">
+    <link href="css/bateria.css" rel="stylesheet">
+    <link href="js/bateriaOficial.js" rel="stylesheet">
+    
+</head>
+<script>
+    function showModal(){
+        var element = document.getElementById("modal");
+        element.classList.add("show-modal");
+    }
+
+    function hidenModal(){
+        var element = document.getElementById("modal");
+        element.classList.remove("show-modal");
+    }
+    /*Função para vizualizar se o carrinho parou*/
+     function showModalStop(){
+        let element = document.getElementById("modalStop");
+        element.classList.add("show-modalStop");
+     }
+   function hidenModalStop(){
+        var element = document.getElementById("modalStop");
+        element.classList.remove("show-modalStop");
+    }
+    function hidenModalPeca(){
+        var element = document.getElementById("modalPeca");
+        element.classList.remove("show-modalPeca");
+
+    }     
+
+</script>
+<body background="img/fundo-de-tecnologia-abstrato-gradiente-azul_23-2149213765.webp">
+
+    <div class="battery">
+        <div class="level charging">
+            <div class="text">00</div>
+        </div>
+    </div>
+
+
+ <!--Alerta que o carrinho precisa de manutenção-->
+ <div class="containerAlerta">
+    <button type="button" onclick="showModal()" class="flash bnt" style="top:396px; position:absolute; color: black; left: 162.6px;">Alerta</button>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div onclick="hidenModal()" class="spanAlerta">&times;</div>
+             <h1>O carrinho precisa de manutenção</h1>      
+     </div>
+</div>
+
+ <!--Alerta que o carrinho Parou-->
+ <button onclick="showModalStop()" class="flashStop bntStop" style=" position:fixed; color:black; top: 403px; left: 275px;">Parou</button>
+ <div class="modalStop" id="modalStop">
+     <div class="modal-contentStop">
+         <div onclick="hidenModalStop()" class="divStop">&times;</div>
+         <h1>O carrinho parou de funcionar</h1>
+     </div>
+ </div>
+
+
+<!--Botão Peça-->
+<center><button onclick="start()" class="bntPeca" style="position:absolute; top:403px; left: 40px;">Ver Peças</button></center>
+<div class="modalPeca" id="modalPeca">
+  <div class="modal-contentPeca"></div>
+    <div onclick="hidenModalPeca()" class="divPeca">&times;</div>
+      <h1 style="margin-top: 270%; position:fixed; margin-left:25%;" id="watch">00</h1>
+  </div>
+</div>
+
+
+
+
+  <!--MENU-->
+    <!--<div class="container">
+        <div class="mobile">
+          <div class="first-row">
+      
+            <button style="background-color:white; border: none; cursor:pointer; outline: none;">
+            <div class="home" style="margin-left: -29.5%; margin-top: -9%;">
+            <span class="icon-container">
+              <i class="first fas fa-book-open" size="2x"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="49" fill="currentColor" class="bi bi-house" color="#041E42" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+              </svg>
+            </span>
+          </div>
+        </button>-->
+
+        <div class="container" style="position: fixed;">
+            <div class="mobile">
+              <div class="first-row">
+          
+                <button style="background-color:white; border: none; cursor:pointer; outline: none;">
+                <div class="home" style="margin-left: -37%; margin-top:-25px;">
+                <span class="icon-container">
+                  <i class="first fas fa-book-open" size="2x"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-house" color="#041E42" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                    <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                  </svg>
+                </span>
+              </div>
+            </button>
+
+
+
+
+
+      <!--  <button style="background-color:white; border: none; cursor:pointer; outline: none;">
+            <div class="status">
+            <span class="icon-container" style="margin-left: -135%; margin-top: -9%;">
+              <i class="second fas fa-edit"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="49" fill="currentColor" class="bi bi-journal-text" color="#041E42" viewBox="0 0 16 16">
+                <path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+                <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+              </svg>
+            </span>
+          </div>
+        </button>-->
+
+        <button style="background-color:white; border: none; cursor:pointer; outline: none;">
+            <div class="status" style="margin-left: -150px; margin-top: -24px;">
+            <span class="icon-container">
+              <i class="second fas fa-edit"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-journal-text" color="#041E42" viewBox="0 0 16 16">
+                <path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+                <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+              </svg>
+            </span>
+          </div>
+        </button>
+
+            <!--LOGO SCANIA-->
+            <img src="IMG/scania-logo.webp" style="height: 58px; width:131px; margin-top: 2%; position: absolute; left:153px;">
+
+            
+
+
+
+
+            <button style="background-color:white; border: none; cursor:pointer; outline: none;">
+                <div class="chaticone" style="margin-left:-52px; margin-top:-25px;">
+                <span class="icon-container">
+                  <i class="fourth fas fa-heartbeat"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="currentColor" class="bi bi-chat-right-dots" viewBox="0 0 16 16" color="#041E42">
+                    <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>
+                    <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                  </svg>
+                </span>
+              </div>
+                </button> 
+
+                
+        
+
+                <button style="background-color:white; border: none; cursor:pointer; outline: none;">
+                    <div class="sair" style="margin-left:-38px; margin-top:-27px;">
+                      <span class="icon-container">
+                        <i class=" third fas fa-music"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="currentColor" class="bi bi-box-arrow-right"  color="#041E42"  viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                          <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                        </svg>
+                      </span>
+          
+                    </div>
+                    </button>
+          
+                      
+                    </div>
+                    <div class="second-row"></div>
+                  </div>
+                </div>
+      
+                                                                
+                <script src="js/contador.js"></script>
+                            
+</body>
+</html>
